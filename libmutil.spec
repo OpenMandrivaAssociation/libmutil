@@ -16,6 +16,7 @@ Source:		http://www.minisip.org/source/%{name}-%{svn}.tar.bz2
 URL:		http://www.minisip.org/
 License:	GPL
 Group:		System/Libraries
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:  openssl-devel
 
 %description
