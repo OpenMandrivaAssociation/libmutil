@@ -2,11 +2,11 @@
 %define oname	mutil
 %define version 0.3.1
 %define svn	3589
-%define release %mkrel %svn.1
+%define release %mkrel %svn.2
 
 %define major	0
 %define libname %mklibname %{oname} %major
-%define develname %mklibname %{name} -d
+%define develname %mklibname %{oname} -d
 
 Name: 	 	%{name}
 Summary: 	Utility library from MiniSip
