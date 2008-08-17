@@ -2,7 +2,7 @@
 %define oname	mutil
 %define version 0.3.1
 %define svn	3589
-%define release %mkrel %svn.2
+%define release %mkrel %svn.3
 
 %define major	0
 %define libname %mklibname %{oname} %major
@@ -36,6 +36,7 @@ Summary: 	Header files and static libraries from %name
 Group: 		Development/C
 Requires: 	%{libname} >= %{version}
 Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	lib%{name}-devel
 
 %description -n %{develname}
 Libraries and includes files for developing programs based on %name.
