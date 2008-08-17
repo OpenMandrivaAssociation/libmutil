@@ -1,7 +1,7 @@
 %define name	libmutil
 %define oname	mutil
 %define version 0.3.1
-%define svn	3565
+%define svn	3589
 %define release %mkrel %svn.1
 
 %define major	0
