@@ -1,8 +1,8 @@
 %define name	libmutil
 %define oname	mutil
 %define version 0.3.1
-%define svn	3589
-%define release %mkrel %svn.3
+%define svn	3591
+%define release %mkrel %svn.1
 
 %define major	0
 %define libname %mklibname %{oname} %major
@@ -15,7 +15,7 @@ Release: 	%{release}
 
 Source:		http://www.minisip.org/source/%{name}-%{svn}.tar.bz2
 URL:		http://www.minisip.org/
-License:	GPL
+License:	GPLv2+
 Group:		System/Libraries
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:  openssl-devel
@@ -29,14 +29,14 @@ Group:          System/Libraries
 Provides:       %{oname} = %{version}-%{release}
 
 %description -n %{libname}
-Dynamic libraries from %name.
+Dynamic libraries from %{name}.
 
 %package -n 	%{develname}
 Summary: 	Header files and static libraries from %name
 Group: 		Development/C
 Requires: 	%{libname} >= %{version}
 Provides:	%{name}-devel = %{version}-%{release}
-Obsoletes:	lib%{name}-devel
+Obsoletes:	%{_lib}mutil0-devel
 
 %description -n %{develname}
 Libraries and includes files for developing programs based on %name.
@@ -65,8 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_libdir}/*.so.%{major}
-%{_libdir}/*.so.%{major}.*
+%{_libdir}/*.so.%{major}*
 
 %files -n %{develname}
 %defattr(-,root,root)
