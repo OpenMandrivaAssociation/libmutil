@@ -2,7 +2,7 @@
 %define oname	mutil
 %define version 0.3.1
 %define svn	3608
-%define release %mkrel %svn.2
+%define release %mkrel %svn.3
 
 %define major	0
 %define libname %mklibname %{oname} %major
